@@ -16,6 +16,18 @@ struct Destructible
 
 int main()
 {
-	vector<Destructible> objects{ {"John", 24}, {"Lee", 24} };
-    std::cout << "Hello World!\n";
+	const vector <Destructible> objects
+	{
+		{"John", 24},
+		{"Alex", 24},
+		{"Daniel", 24},
+		{"Taylor", 24},
+		{"Brian", 24},
+		{"Amelia", 24}
+	};
+
+
+	for ( auto object : objects ) {
+		cout << "Name: " << object.name << "\tHit Points: " << object.hitPoints << "\t     Type: " << 3 << "\n";
+	}
 }
