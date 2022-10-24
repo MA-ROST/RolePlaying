@@ -1,33 +1,23 @@
 // main.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
-#include <iostream>
-#include <string>
-#include <vector>
+#include "main.h"
 //--------------------------
-using std::cout; using std::endl;
-using std::vector; using std::string;
-
-
-struct Destructible
-{
-	string name;
-	int hitPoints;
-};
 
 int main()
 {
 	const vector <Destructible> objects
 	{
-		{"John", 24},
-		{"Alex", 24},
-		{"Daniel", 24},
-		{"Taylor", 24},
-		{"Brian", 24},
-		{"Amelia", 24}
+		{"John", 24, Type::apple},
+		{"Alex", 24, Type::apple},
+		{"Daniel", 24, Type::apple},
+		{"Taylor", 24, Type::apple},
+		{"Brian", 24, Type::apple},
+		{"Amelia", 24, Type::apple}
 	};
 
-
-	for ( auto object : objects ) {
-		cout << "Name: " << object.name << "\tHit Points: " << object.hitPoints << "\t     Type: " << 3 << "\n";
+	for ( const auto& object : objects ) {
+		cout << "Name: " << object.name
+			<< "\tHit Points: " << object.hitPoints
+			<< "\t     Type: " << static_cast<int>(object.objectType) << "\n";
 	}
 }
