@@ -7,17 +7,17 @@ int main()
 {
 	const vector <Destructible> objects
 	{
-		{"John", 24, Type::apple},
-		{"Alex", 24, Type::apple},
-		{"Daniel", 24, Type::apple},
-		{"Taylor", 24, Type::apple},
-		{"Brian", 24, Type::apple},
-		{"Amelia", 24, Type::apple}
+		{"John", 15, Type::april},
+		{"Alex", 34, Type::july},
+		{"Daniel", 36, Type::august},
+		{"Taylor", 19, Type::december},
+		{"Brian", 24, Type::january},
+		{"Amelia", 22, Type::may}
 	};
 
 	for ( const auto& object : objects ) {
-		cout << "Name: " << object.name
-			<< "\tHit Points: " << object.hitPoints
-			<< "\t     Type: " << static_cast<int>(object.objectType) << "\n";
+		cout << object.name << " is " << object.hitPoints <<
+			" years old, and they were born in the " << static_cast <int> (object.
+				month) << " month. \n";
 	}
 }
